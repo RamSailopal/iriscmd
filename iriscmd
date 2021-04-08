@@ -1,0 +1,30 @@
+#!/bin/bash
+#
+#       Allows the interfacing of Intersystems IRIS with command line
+#
+#
+#	Parameters:
+#
+#	First - Instance name
+#
+#	Second - Namespace
+#
+#	Third - Object script command to execute
+#
+if [[ "$1" == "" ]]
+then
+        echo "Pass the name of the Iris instance as the first parameter"
+        exit
+fi
+
+if [[ "$2" == "" ]]
+then
+        echo "Pass the namespace to execute the command in as a second parameter"
+        exit
+fi
+if [[ "$3" == "" ]]
+then
+	echo "Pass the Iris command to execute as the third parameter"
+	exit
+fi
+(sleep 1;echo "$3";sleep 1;echo "H") | iris terminal "$1" -U "$2" | grep -Ev "(^$)|(^Node)|(^$2>)"
