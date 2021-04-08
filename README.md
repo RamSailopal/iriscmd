@@ -16,6 +16,7 @@ This will set up a global TEST with a subscript TEST and a value TEST, on an ins
   example 2:
      
      iriscmd "IRIS" "USER" 'W ^TEST("TEST")'
+     TEST
 
 This will return the TEST value created in example 1
 
