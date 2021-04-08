@@ -21,5 +21,10 @@ This will set up a global TEST with a subscript TEST and a value TEST, on an ins
 This will return the TEST value created in example 1
 
 PREREQUISITES - An installed version of intersystems IRIS (See iris repo for installation with Ansible)
+              
               - grep installed on the machine running iriscmd
-	
+
+INSTALLATION - Run:
+
+      git clone https://github.com/RamSailopal/iriscmd.git
+      mv iriscmd/iriscmd /usr/local/bin 	
