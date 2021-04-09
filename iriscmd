@@ -27,4 +27,4 @@ then
 	echo "Pass the Iris command to execute as the third parameter"
 	exit
 fi
-(sleep 1;echo "$3";sleep 1;echo "H") | iris terminal "$1" -U "$2" | grep -Ev "(^$)|(^Node)|(^$2>)"
+(echo "$3";echo "H") | iris terminal "$1" -U "$2" | grep -Ev "(^$)|(^Node)|(^$2>)"
